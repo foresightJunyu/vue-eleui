@@ -39,6 +39,23 @@ const routes = [
                         component: () => import('../views/home/wms/list.vue')
                     },
                 ]
+            },
+            {
+                path: '/user', // 用户管理
+                name: 'user',
+                component: () => import('../views/home/user/index.vue'),
+                children: [
+                    {
+                        path: '/user/role', //角色统计
+                        name: 'role',
+                        component: () => import('../views/home/user/role.vue')
+                    },
+                    {
+                        path: '/user/stats', //用户统计
+                        name: 'stats',
+                        component: () => import('../views/home/user/stats.vue')
+                    }
+                ]
             }
         ]
     }

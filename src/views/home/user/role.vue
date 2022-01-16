@@ -1,5 +1,7 @@
 <template>
-<div></div>
+<div>
+  <h2>角色统计</h2>
+</div>
 
 </template>
 

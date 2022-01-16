@@ -1,11 +1,17 @@
 <template>
   <div>
     <el-container>
+<!--      左侧导航-->
       <el-aside width="200px">
         <NavMenu/>
       </el-aside>
+<!--      右侧主体-->
       <el-container>
-        <el-header>Header</el-header>
+<!--        头部-->
+        <el-header>Header
+          <el-button type="primary" style="float: right" @click="goBack()">退出</el-button>
+        </el-header>
+<!--        主体-->
         <el-main>
           <router-view/>
         </el-main>
@@ -22,9 +28,13 @@ export default {
   data() {
     return {}
   },
-  methods: {},
   components: {
     NavMenu
+  },
+  methods: {
+    goBack() {
+      this.$router.push('/login')
+    }
   }
 }
 

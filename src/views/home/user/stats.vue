@@ -1,5 +1,7 @@
 <template>
-<div></div>
+<div>
+  <h2>用户统计</h2>
+</div>
 
 </template>
 
